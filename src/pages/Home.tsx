@@ -1,7 +1,8 @@
 import * as React from 'react'
+import Hero from './../components/Hero';
 
 const App = () => {
-  return <div>Hello</div>
+  return <Hero />
 }
 
 export default App
