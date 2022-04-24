@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
+import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
@@ -43,9 +44,15 @@ function Stars(props: unknown) {
 
 const Hero = () => {
   return (
+    <div className='hero'>
+    <div className='hero-text'>
+      <h1>Jessica Brochu</h1>
+      <h2>Développeuse Web Junior</h2>
+    </div>
     <Canvas style={{ height: '100vh' }} camera={{ position: [0, 0, 1] }}>
       <Stars />
     </Canvas>
+    </div>
   )
 }
 

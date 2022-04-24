@@ -1,4 +1,4 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -16,7 +16,7 @@ body,
 
 body {
   overscroll-behavior-y: none;
-  font-family: 'Inter var', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #ddd;
@@ -33,9 +33,4 @@ svg {
   fill: #ddd;
 }
 
-h1 {
-  background: #fff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
