@@ -1,0 +1,78 @@
+{
+  "projects": [
+    {
+      "chipInfo": ["Typescript", "React"],
+      "title": "Traveler",
+      "isPersonal": true,
+      "image": "assets/traveler.png",
+      "isFinished": true,
+      "links": {
+        "github": "https://github.com/JessicaBrochu/Traveler",
+        "website": "https://traveler-jessica-brochu.netlify.app/"
+      }
+    },
+    {
+      "chipInfo": ["Typescript", "React"],
+      "title": "Portfolio",
+      "isPersonal": true,
+      "image": "assets/portfolio.png",
+      "isFinished": true,
+      "links": {
+        "github": "https://github.com/JessicaBrochu/Portfolio-H2022"
+      }
+    },
+    {
+      "chipInfo": ["HTML", "SCSS", "JavaScript"],
+      "title": "TimDesign",
+      "isPersonal": false,
+      "image": "assets/timdesign.png",
+      "isFinished": true,
+      "links": {
+        "website": "https://jbrochu.dectim.ca/cours/cw3/tp3/"
+      }
+    },
+    {
+      "chipInfo": ["HTML", "SCSS", "JavaScript"],
+      "title": "ZDesign",
+      "isPersonal": true,
+      "image": "assets/zdesign.png",
+      "isFinished": true,
+      "links": {
+        "github": "https://github.com/JessicaBrochu/ZDesign",
+        "website": "https://jbrochu.dectim.ca/zdesign/"
+      }
+    },
+    {
+      "chipInfo": [],
+      "title": "Recette en pot",
+      "isPersonal": false,
+      "image": "assets/recette-en-pot.png",
+      "isFinished": false,
+      "links": {}
+    },
+    {
+      "chipInfo": [],
+      "title": "Streamago",
+      "isPersonal": true,
+      "image": "assets/streamago.png",
+      "isFinished": false,
+      "links": {}
+    },
+    {
+      "chipInfo": [],
+      "title": "Andrew's blog",
+      "isPersonal": true,
+      "image": "assets/andrew-blog.png",
+      "isFinished": false,
+      "links": {}
+    },
+    {
+      "chipInfo": [],
+      "title": "Breakfast",
+      "isPersonal": true,
+      "image": "assets/breakfast.png",
+      "isFinished": false,
+      "links": {}
+    }
+  ]
+}
