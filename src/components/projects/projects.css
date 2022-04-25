@@ -1,0 +1,44 @@
+.projects .projects-finished,
+.projects .projects-in-progress {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 1000px) {
+
+  .projects .projects-finished,
+  .projects .projects-in-progress {
+    grid-template-columns: 100%;
+  }
+}
+
+h3 {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px){
+    h3{
+        font-size: 2.5rem;
+    }
+
+    h4{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 670px){
+    h3{
+      font-size: 1.6rem;
+    }
+  
+    h4{
+      font-size: 1.3rem;
+    }
+  }

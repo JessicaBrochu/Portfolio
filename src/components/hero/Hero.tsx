@@ -44,14 +44,19 @@ function Stars(props: unknown) {
 
 const Hero = () => {
   return (
-    <div className='hero'>
-    <div className='hero-text'>
-      <h1>Jessica Brochu</h1>
-      <h2>Développeuse Web Junior</h2>
-    </div>
-    <Canvas style={{ height: '100vh' }} camera={{ position: [0, 0, 1] }}>
-      <Stars />
-    </Canvas>
+    <div className="hero">
+      <div className='wrapper'>
+        <div className="hero-text">
+          <h1>Jessica Brochu</h1>
+          <h2>Développeuse Web Junior</h2>
+        </div>
+      </div>
+      <Canvas
+        style={{ height: '100vh', background: '#07070e' }}
+        camera={{ position: [0, 0, 1] }}
+      >
+        <Stars />
+      </Canvas>
     </div>
   )
 }
