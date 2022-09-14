@@ -26,6 +26,7 @@ function Stars(props: unknown) {
         positions={sphere}
         stride={3}
         frustumCulled={false}
+        //@ts-ignore
         {...props}
       >
         <PointMaterial
@@ -48,7 +49,7 @@ const Hero = () => {
       <div className='wrapper'>
         <div className="hero-text">
           <h1>Jessica Brochu</h1>
-          <h2>Développeuse Web Junior</h2>
+          <h2>Développeuse Front-End</h2>
         </div>
       </div>
       <Canvas
