@@ -28,20 +28,20 @@ const Projects = () => {
     <div className="projects traveler">
       <div className="projects-ctn">
 
-        <div className="project">
+        <a href="#" className="project">
           <div className="project-hover">
-            <h4>TRAVELER</h4>
-            <nav>
-              <ul className="project-technologies">
-                <li>ReactJs</li>
-                <li>TypeScript</li>
-              </ul>
-            </nav>
-          </div>
-          <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
-        </div>
+              <h4>TRAVELER</h4>
+              <nav>
+                <ul className="project-technologies">
+                  <li>ReactJs</li>
+                  <li>TypeScript</li>
+                </ul>
+              </nav>
+            </div>
+            <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
+        </a>
 
-        <div className="project">
+        <a href="#" className="project">
           <div className="project-hover">
             <h4>RECETTES EN POT</h4>
             <nav>
@@ -53,9 +53,9 @@ const Projects = () => {
             </nav>
           </div>
           <img src="./public/assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
-        </div>
+        </a>
 
-        <div className="project">
+        <a href="#" className="project">
           <div className="project-hover">
             <h4>FURNITURA</h4>
             <nav>
@@ -66,21 +66,21 @@ const Projects = () => {
             </nav>
           </div>
           <img src="./public/assets/furnitura.jpg" alt="Image du projet Furnitura" />
-        </div>
+        </a>
 
-        <div className="project">
+        <a href="#" className="project">
           <div className="project-hover">
-          <h4>TIMDESIGN</h4>
-          <nav>
-              <ul className="project-technologies">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-              </ul>
-            </nav>
-          </div>
-          <img src="./public/assets/timdesign.jpg" alt="Image du projet Timdesign" />
-        </div>
+            <h4>TIMDESIGN</h4>
+            <nav>
+                <ul className="project-technologies">
+                  <li>HTML</li>
+                  <li>SCSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </nav>
+            </div>
+            <img src="./public/assets/timdesign.jpg" alt="Image du projet Timdesign" />
+        </a>
 
       </div>
     </div>

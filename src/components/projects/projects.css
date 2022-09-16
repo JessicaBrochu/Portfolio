@@ -1,7 +1,6 @@
 .projects{
   height: 100vh;
   width: 100vw;
-  background-color: salmon;
 }
 
 .projects-ctn{
@@ -14,10 +13,12 @@
   width: 50vw;
   display: block;
   object-fit: cover;
+  transition: all 400ms ease-in-out;
 }
 
 .project{
   position: relative;
+  overflow: hidden;
 }
 
 .project-hover{
@@ -26,6 +27,11 @@
   background: linear-gradient(180deg, rgba(7, 7, 14, 0.1) 0%, #07070E 100%);
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+
+.project:hover img{
+  transform: scale(1.06);
 }
 
 .project-hover h4{
