@@ -25,41 +25,63 @@ const Projects = () => {
   }
 
   return (
-    <div className="projects">
-      <div className="wrapper">
-        <h3>MES PROJETS</h3>
-        <h4>TERMINÉS</h4>
-        <div className="projects-finished">
-          {projects?.map(
-            ({ chipInfo, image, title, isPersonal, isFinished, links }) =>
-              isFinished && (
-                <Card
-                  key={title}
-                  title={title}
-                  image={image}
-                  isPersonal={isPersonal}
-                  chipInfo={chipInfo}
-                  links={links}
-                />
-              )
-          )}
+    <div className="projects traveler">
+      <div className="projects-ctn">
+
+        <div className="project">
+          <div className="project-hover">
+            <h4>TRAVELER</h4>
+            <nav>
+              <ul className="project-technologies">
+                <li>ReactJs</li>
+                <li>TypeScript</li>
+              </ul>
+            </nav>
+          </div>
+          <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
         </div>
-        <h4>EN COURS</h4>
-        <div className="projects-in-progress">
-          {projects?.map(
-            ({ chipInfo, image, title, isPersonal, isFinished, links }) =>
-              !isFinished && (
-                <Card
-                  key={title}
-                  title={title}
-                  image={image}
-                  isPersonal={isPersonal}
-                  chipInfo={chipInfo}
-                  links={links}
-                />
-              )
-          )}
+
+        <div className="project">
+          <div className="project-hover">
+            <h4>RECETTES EN POT</h4>
+            <nav>
+              <ul className="project-technologies">
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>Javascript</li>
+              </ul>
+            </nav>
+          </div>
+          <img src="./public/assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
         </div>
+
+        <div className="project">
+          <div className="project-hover">
+            <h4>FURNITURA</h4>
+            <nav>
+              <ul className="project-technologies">
+                <li>Vue.js</li>
+                <li>JavaScript</li>
+              </ul>
+            </nav>
+          </div>
+          <img src="./public/assets/furnitura.jpg" alt="Image du projet Furnitura" />
+        </div>
+
+        <div className="project">
+          <div className="project-hover">
+          <h4>TIMDESIGN</h4>
+          <nav>
+              <ul className="project-technologies">
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>Javascript</li>
+              </ul>
+            </nav>
+          </div>
+          <img src="./public/assets/timdesign.jpg" alt="Image du projet Timdesign" />
+        </div>
+
       </div>
     </div>
   )
