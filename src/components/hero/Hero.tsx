@@ -56,10 +56,21 @@ const Hero = () => {
           </svg>
         </a>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#">ACCUEIL</a></li>
+          <li><a href="#">PROJETS</a></li>
+          <li><a href="#">À PROPOS</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
       <div className='wrapper'>
         <div className="hero-text">
           <h1>Jessica Brochu</h1>
           <h2>Développeuse Front-End</h2>
+          <div className="button-ctn">
+            <a href="#">Voir mes projets</a>
+          </div>
         </div>
       </div>
       <Canvas
