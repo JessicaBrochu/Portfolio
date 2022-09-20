@@ -56,7 +56,7 @@ const Hero = () => {
           </svg>
         </a>
       </div>
-      <nav>
+      <nav className="desktop-nav">
         <ul>
           <li><a href="#">ACCUEIL</a></li>
           <li><a href="#">PROJETS</a></li>

@@ -13,7 +13,7 @@
   fill: #D35F74;
 }
 
-nav{
+.desktop-nav{
   position: absolute;
   right: 15px;
   top: 50px;
@@ -21,7 +21,7 @@ nav{
   width: 100%;
 }
 
-nav ul{
+.desktop-nav ul{
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -29,16 +29,16 @@ nav ul{
   margin: 0;
 }
 
-nav ul li{
+.desktop-nav ul li{
   padding: 0 25px;
 }
 
-nav ul li a{
+.desktop-nav ul li a{
   color: #fff;
   font-weight: 600;
 }
 
-nav ul li a:hover{
+.desktop-nav ul li a:hover{
   color: #D35F74;
   font-weight: 600;
 }

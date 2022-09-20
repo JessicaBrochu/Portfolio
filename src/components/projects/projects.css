@@ -1,16 +1,67 @@
-.projects .projects-finished,
-.projects .projects-in-progress {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+.projects{
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (max-width: 1000px) {
+.projects-ctn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .projects .projects-finished,
-  .projects .projects-in-progress {
-    grid-template-columns: 100%;
-  }
+.project img{
+  height: 50vh;
+  width: 50vw;
+  display: block;
+  object-fit: cover;
+  transition: all 400ms ease-in-out;
+}
+
+.project{
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hover{
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(7, 7, 14, 0.1) 0%, #07070E 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.project:hover img{
+  transform: scale(1.06);
+}
+
+.project-hover h4{
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+}
+
+.project-hover::after{
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #fff;
+}
+
+.project-technologies{
+  display: flex;
+  list-style: none;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+
+.project-technologies li{
+  padding-left: 30px;
+  font-size: 1.25rem;
 }
 
 h3 {
@@ -20,7 +71,21 @@ h3 {
 
 h4 {
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 1450px){
+
+  .projects-ctn{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project img{
+    height: 50vh;
+    width: 100vw;
+  }
 }
 
 @media (max-width: 1000px){
