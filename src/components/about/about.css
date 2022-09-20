@@ -1,0 +1,22 @@
+.about{
+    height: 100vh;
+    background: linear-gradient(to left, #07070E 50%, #fff 50%);
+    display: flex;
+    align-items: center;
+}
+
+.about-content{
+    width: 50%;
+    padding-right: 115px;
+}
+
+.about-content p{
+    line-height: 200%;
+}
+
+@media (max-width: 1450px){
+
+    .about{
+        position: absolute;
+    }
+  }

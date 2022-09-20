@@ -21,6 +21,14 @@ body {
   overflow: overlay;
 }
 
+h3{
+  margin: 0;
+}
+
+span{
+  color: #CB435C;
+}
+
 a {
   pointer-events: all;
   color: #ddd;
