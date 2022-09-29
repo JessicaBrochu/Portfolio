@@ -4,7 +4,7 @@ import './projects.css'
 const Projects = () => {
 
   return (
-    <div className="projects traveler">
+    <div className="projects">
       <div className="projects-ctn">
 
         <a href="#" className="project">

@@ -77,8 +77,11 @@ h4 {
 
 @media (max-width: 1450px){
 
-  .projects-ctn{
+  .projects{
     height: 200vh;
+  }
+
+  .projects-ctn{
     display: grid;
     grid-template-columns: 1fr;
   }
