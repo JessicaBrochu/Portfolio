@@ -7,7 +7,7 @@ const Projects = () => {
     <div className="projects">
       <div className="projects-ctn">
 
-        <a href="#" className="project">
+        <a href="traveler" className="project">
           <div className="project-hover">
               <h4>TRAVELER</h4>
               <nav>
@@ -20,7 +20,7 @@ const Projects = () => {
             <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
         </a>
 
-        <a href="#" className="project">
+        <a href="recettes-en-pot" className="project">
           <div className="project-hover">
             <h4>RECETTES EN POT</h4>
             <nav>
@@ -34,7 +34,7 @@ const Projects = () => {
           <img src="./public/assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
         </a>
 
-        <a href="#" className="project">
+        <a href="furnitura" className="project">
           <div className="project-hover">
             <h4>FURNITURA</h4>
             <nav>
@@ -47,7 +47,7 @@ const Projects = () => {
           <img src="./public/assets/furnitura.jpg" alt="Image du projet Furnitura" />
         </a>
 
-        <a href="#" className="project">
+        <a href="timdesign" className="project">
           <div className="project-hover">
             <h4>TIMDESIGN</h4>
             <nav>
