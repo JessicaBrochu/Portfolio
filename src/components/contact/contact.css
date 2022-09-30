@@ -1,0 +1,80 @@
+.contact{
+    height: 80vh;
+}
+
+.contact .wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form{
+    width: 50%;
+}
+
+.contact-content{
+    width: 50%;
+}
+
+.contact-input{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.contact-input:not(:first-child){
+    margin-top: 15px;
+}
+
+.contact-input input{
+    height: 36px;
+}
+
+.message-box{
+    height: 210px;
+}
+
+.contact-button{
+    width: 400px;
+    height: 36px;
+    margin-top: 30px;
+    background-color: #D35F74;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-button:hover{
+    background-color: #dc7f90;
+}
+
+.contact a{
+    color: #D35F74;
+    text-decoration: underline;
+}
+
+.contact a:hover{
+    color: #e08f9e;
+}
+
+.contact-social{
+    margin-top: 30px;
+}
+
+.contact-social a{
+    margin-right: 12px;
+}
+
+.contact label{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.icons:hover > svg *{
+    fill: #D35F74;
+}
+
+.contact-mail-phone{
+    margin-top: 30px;
+}

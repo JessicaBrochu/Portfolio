@@ -7,7 +7,7 @@ const About = () => {
       <div className="about">
         <div className="wrapper">
             <div className='about-content'>
-                <h3>À propos</h3>
+                <h3>À PROPOS</h3>
                 <p>Bonjour,</p>
                 <p>je suis une <span>développeuse front-end</span> constamment à la recherche de nouveaux défis qui me permettront d’étoffer mes connaissances et ainsi progresser dans le domaine du web.</p>
                 <p>Ayant déjà réalisé un stage en tant que développeuse front-end, je suis à la recherche d’une expérience similaire dans <span>une entreprise qui recherche une développeuse motivée.</span></p>
