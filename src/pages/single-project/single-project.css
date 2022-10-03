@@ -1,0 +1,73 @@
+.single-traveler{
+    background-image: url("../../../public/assets/traveler-bg.jpg");
+}
+
+.single-recettes{
+    background-image: url("../../../public/assets/recettes-bg.jpg");
+}
+
+.single-furnitura{
+    background-image: url("../../../public/assets/furnitura-bg.jpg");
+}
+
+.single-timdesign{
+    background-image: url("../../../public/assets/timdesign-bg.jpg");
+}
+
+.single-project h1{
+    padding-top: 140px;
+    font-size: 140px;
+}
+
+.single-project p{
+    color: #fff;
+}
+
+.single-project li{
+    color: #fff;
+}
+
+.single-project-infos{
+    display: flex;
+    align-items: center;
+    padding-bottom: 90px;
+}
+
+.single-project-content{
+    padding-right: 20px;
+}
+
+.single-project-content nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0 0 25px 0;
+    margin: 0;
+}
+
+.single-project-content nav ul li{
+    margin-right: 25px;
+    font-weight: 800;
+}
+
+.single-project-btn-ctn{
+    padding-top: 25px;
+}
+
+.single-project-btn-ctn a{
+    background-color: #D35F74;
+    color: #07070E;
+    font-weight: 500;
+    margin-right: 30px;
+    padding: 5px 10px;
+}
+
+.single-project-media{
+    width: 60%;
+    height: 50%;
+}
+
+.single-project-media img{
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
+}
