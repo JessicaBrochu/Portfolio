@@ -7,13 +7,22 @@ import Footer from '../../components/footer/Footer'
 import './home.css'
 
 const App = () => {
+  
   return (
     <div className='home'>
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
+      <div className='section'>
+        <Hero />
+      </div>
+      <div className='section'>
+        <Projects />
+      </div>
+      <div className='section'>
+        <About />
+      </div>
+      <div className='section'>
+        <Contact />
+        <Footer />
+      </div>
     </div>
   )
 }
