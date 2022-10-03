@@ -1,8 +1,15 @@
-import * as React from 'react'
+import { useState, useRef } from 'react'
 import './header.css'
 
 const Header = () => {
 
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        console.log('The link was clicked.');
+        event.currentTarget.classList.toggle('hamburger-is-active')
+        document.body.classList.toggle('mobile-nav');
+    };
+    
     return (
       <div className="header">
         <div className="logo-ctn">
@@ -15,14 +22,19 @@ const Header = () => {
                 </svg>
             </a>
         </div>
-        <nav className="desktop-nav">
+        <nav className="desktop-nav" id="nav">
             <ul>
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#">PROJETS</a></li>
-            <li><a href="#">À PROPOS</a></li>
-            <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ACCUEIL</a></li>
+                <li><a href="#">PROJETS</a></li>
+                <li><a href="#">À PROPOS</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
+        <button onClick={handleClick} className="header-toggle" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
       </div>
     )
   }
