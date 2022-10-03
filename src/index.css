@@ -45,10 +45,10 @@ svg {
   margin: 0 auto;
 }
 
-@media (max-width: 1475px){
+@media (max-width: 1470px){
 
   .wrapper{
-    padding: 0 25px;
+    padding: 0 20px;
   }
 }
 
