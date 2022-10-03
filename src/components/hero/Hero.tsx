@@ -53,7 +53,7 @@ const Hero = () => {
           <h1>Jessica Brochu</h1>
           <h2>Développeuse Front-End</h2>
           <div className="button-ctn">
-            <a href="#">Voir mes projets</a>
+            <a href="#" className='button'>Voir mes projets</a>
           </div>
         </div>
       </div>
