@@ -52,6 +52,13 @@ svg {
   }
 }
 
+@media (max-width: 767px){
+
+  .wrapper{
+    padding: 0 10px;
+  }
+}
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
