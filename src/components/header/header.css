@@ -17,7 +17,7 @@
 
 .desktop-nav{
   position: absolute;
-  right: 15px;
+  right: 40px;
   top: 50px;
   z-index: 1;
   width: 100%;
@@ -32,7 +32,7 @@
 }
 
 .desktop-nav ul li{
-  padding: 0 25px;
+  padding-left: 50px;
 }
 
 .desktop-nav ul li a{
@@ -121,5 +121,27 @@
 
 .mobile-nav .desktop-nav{
     transform: translate(0%);
+  }
+}
+
+@media (max-width: 1470px){
+
+  .logo-ctn{
+    left: 20px;
+  }
+
+  .desktop-nav{
+    right: 20px;
+  }
+}
+
+@media (max-width: 676px){
+
+  .logo-ctn{
+    left: 10px;
+  }
+
+  .desktop-nav{
+    right: 10px;
   }
 }
