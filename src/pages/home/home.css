@@ -22,4 +22,8 @@ body {
     .home{
         scroll-snap-type: none;
     }
+
+    .section{
+        height: auto;
+    }
 }
