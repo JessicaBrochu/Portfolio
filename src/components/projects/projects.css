@@ -1,44 +1,148 @@
-.projects .projects-finished,
-.projects .projects-in-progress {
+.projects{
+  height: 100vh;
+  width: 100vw;
+}
+
+.projects-ctn{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
 }
 
-@media (max-width: 1000px) {
-
-  .projects .projects-finished,
-  .projects .projects-in-progress {
-    grid-template-columns: 100%;
-  }
+.project img{
+  height: 50vh;
+  width: 50vw;
+  display: block;
+  object-fit: cover;
+  transition: all 400ms ease-in-out;
 }
 
-h3 {
-  font-size: 3.75rem;
-  font-weight: 700;
+.project{
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hover{
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(7, 7, 14, 0.1) 0%, #07070E 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.project:hover img{
+  transform: scale(1.06);
+}
+
+.project-hover h4{
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+}
+
+.project-hover::after{
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #fff;
+}
+
+.project-technologies{
+  display: flex;
+  list-style: none;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  margin: 12px 0;
+}
+
+.project-technologies li{
+  padding-left: 30px;
+  font-size: 1.25rem;
 }
 
 h4 {
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 1470px){
+
+  .project-hover::after{
+    left: 20px;
+  }
+
+  .project-hover h4{
+    left: 20px;
+  }
+
+  .project-technologies{
+    right: 20px;
+  }
+}
+
+@media (max-width: 1023px){
+
+  .projects{
+    height: 200vh;
+  }
+
+  .projects-ctn{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project img{
+    height: 50vh;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1280px){
+
+  .project-technologies{
+    margin: 8px 0;
+  }
+
+  .project-technologies li{
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  h4{
+    font-size: 28px;
+  }
+
 }
 
 @media (max-width: 1000px){
     h3{
         font-size: 2.5rem;
     }
-
-    h4{
-        font-size: 1.8rem;
-    }
 }
 
-@media (max-width: 670px){
-    h3{
-      font-size: 1.6rem;
+@media (max-width: 510px){
+    .project-technologies{
+      left: 10px;
+      padding: 0;
     }
-  
-    h4{
-      font-size: 1.3rem;
+
+    .project-technologies li{
+      padding: 0 15px 0 0;
     }
-  }
+
+    .project-hover h4{
+      position: absolute;
+      bottom: 75px;
+      left: 10px;
+    }
+
+    .project-hover::after{
+      left: 10px;
+    }
+}

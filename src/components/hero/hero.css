@@ -9,12 +9,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: #ddd;
   width: 100%;
 }
 
 h1 {
-  background: #f9e2f1;
+  background: #fff;
   font-weight: 700;
   font-size: 5.625rem;
   -webkit-background-clip: text;
@@ -25,13 +24,32 @@ h1 {
 }
 
 h2 {
-  background: #f9e2f1;
+  background: #ffff;
   font-weight: 300;
   font-size: 3rem;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
+}
+
+.button-ctn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: -70px;
+  z-index: 1;
+  width: 100%;
+}
+
+.button-ctn a{
+  background-color: #D35F74;
+  padding: 10px 15px;
+  border-radius: 1px;
+}
+
+.button-ctn a:hover{
+  background-color: #be5668;
 }
 
 @media (max-width: 1000px){

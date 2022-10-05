@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -21,6 +21,16 @@ body {
   overflow: overlay;
 }
 
+h3{
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+span{
+  color: #CB435C;
+}
+
 a {
   pointer-events: all;
   color: #ddd;
@@ -37,10 +47,17 @@ svg {
   margin: 0 auto;
 }
 
-@media (max-width: 1475px){
+@media (max-width: 1470px){
 
   .wrapper{
-    padding: 0 25px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .wrapper{
+    padding: 0 10px;
   }
 }
 

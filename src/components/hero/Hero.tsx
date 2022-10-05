@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
+import Header from '../header/Header'
 import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
@@ -26,13 +27,14 @@ function Stars(props: unknown) {
         positions={sphere}
         stride={3}
         frustumCulled={false}
+        //@ts-ignore
         {...props}
       >
         <PointMaterial
           // FIXME find a way to remove this typing error
           //@ts-ignore
           transparent
-          color="#ffa0e0"
+          color="#fff"
           size={0.005}
           sizeAttenuation={true}
           depthWrite={false}
@@ -44,11 +46,15 @@ function Stars(props: unknown) {
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" id='hero'>
+      <Header />
       <div className='wrapper'>
         <div className="hero-text">
           <h1>Jessica Brochu</h1>
-          <h2>Développeuse Web Junior</h2>
+          <h2>Développeuse Front-End</h2>
+          <div className="button-ctn">
+            <a href="#" className='button'>Voir mes projets</a>
+          </div>
         </div>
       </div>
       <Canvas

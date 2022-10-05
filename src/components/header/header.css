@@ -1,0 +1,153 @@
+.header{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 0;
+}
+
+.logo-ctn{
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  z-index: 2;
+}
+
+.logo:hover > svg *{
+  fill: #D35F74;
+}
+
+.desktop-nav{
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  z-index: 1;
+  width: 100%;
+}
+
+.desktop-nav ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-nav ul li{
+  padding-left: 50px;
+}
+
+.desktop-nav ul li a{
+  color: #fff;
+  font-weight: 600;
+}
+
+.desktop-nav ul li a:hover{
+  color: #D35F74;
+  font-weight: 600;
+}
+
+.header-toggle {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  width: 40px;
+  height: 24px;
+  z-index: 10;
+  display: none;
+}
+
+.header-toggle span {
+  background-color: #fff;
+  border-radius: 3px;
+  display: block;
+  height: 4px;
+  width: 40px;
+  top: 0;
+  position: absolute;
+  transition: 0.3s all;
+}
+
+.header-toggle span:nth-child(1){
+  top: 12px;
+}
+
+.header-toggle span:nth-child(3){
+  top: 24px;
+}
+
+@media (max-width: 670px){
+  .header-toggle{
+    display: block;
+  }
+
+  .desktop-nav{
+    transform: translate(100%);
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 450ms ease-in-out;
+  }
+
+  .desktop-nav ul{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #07070E;
+  }
+
+  .desktop-nav ul li{
+    padding: 30px 0;
+  }
+
+  .hamburger-is-active span:nth-child(1){
+    
+    transform: scaleX(0);
+  }
+
+  .hamburger-is-active span:nth-child(2){
+    transform: rotate(45deg) translate(10px, 6px);
+  }
+
+  .hamburger-is-active span:nth-child(3){
+    transform: rotate(-45deg) translate(12px, -7px);
+  }
+
+  .mobile-nav .desktop-nav{
+    transform: translate(0%);
+  }
+}
+
+@media (max-width: 1470px){
+
+  .logo-ctn{
+    left: 20px;
+  }
+
+  .desktop-nav{
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .logo-ctn{
+    top: 25px;
+    left: 10px;
+  }
+
+  .desktop-nav{
+    right: 10px;
+  }
+
+  .header-toggle{
+    right: 10px;
+    top: 35px
+  }
+}
