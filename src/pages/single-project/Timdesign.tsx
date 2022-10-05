@@ -27,7 +27,7 @@ const Timdesign = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="./public/assets/timdesign.jpg" alt="Image du projet Traveler" />
+                <img src="assets/timdesign.jpg" alt="Image du projet Traveler" />
               </div>
             </div>
         </div>
