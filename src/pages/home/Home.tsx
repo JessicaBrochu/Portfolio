@@ -9,7 +9,7 @@ import './home.css'
 const App = () => {
   
   return (
-    <div className='home'>
+    <div className='home' id='home'>
       <div className='section'>
         <Hero />
       </div>
