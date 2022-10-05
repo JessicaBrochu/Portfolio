@@ -27,7 +27,7 @@ const Recettes = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="./public/assets/recettes-en-pot.jpg" alt="Image du projet Traveler" />
+                <img src="assets/recettes-en-pot.jpg" alt="Image du projet Traveler" />
               </div>
             </div>
         </div>
