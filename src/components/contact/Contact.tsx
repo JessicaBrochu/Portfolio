@@ -21,7 +21,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact">
+    <div className="contact" id='contact'>
       <div className="wrapper">
         <form className="contact-form" onSubmit={sendEmail}>
           <div className='contact-input'>

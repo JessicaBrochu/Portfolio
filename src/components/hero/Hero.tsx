@@ -46,7 +46,7 @@ function Stars(props: unknown) {
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" id='hero'>
       <Header />
       <div className='wrapper'>
         <div className="hero-text">
