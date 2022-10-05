@@ -29,7 +29,7 @@ const Traveler = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
+                <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
               </div>
             </div>
         </div>
