@@ -78,3 +78,38 @@
 .contact-mail-phone{
     margin-top: 30px;
 }
+
+@media (max-width: 930px){
+
+    .contact{
+        padding: 100px 0;
+        height: auto;
+    }
+
+    .contact .wrapper{
+      flex-direction: column-reverse;
+      height: auto;
+      align-items: flex-start;
+    }
+
+    .contact-content{
+        width: 100%;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .contact-input{
+        width: 100%;
+    }
+
+    .contact-input:first-child{
+        margin-top: 30px;
+    }
+
+    .contact-button{
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+  }
