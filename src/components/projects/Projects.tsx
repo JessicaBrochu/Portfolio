@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import './projects.css'
 
 const Projects = () => {
@@ -7,7 +8,7 @@ const Projects = () => {
     <div className="projects" id='projects'>
       <div className="projects-ctn">
 
-        <a href="traveler" className="project">
+        <Link to="traveler" className="project">
           <div className="project-hover">
               <h4>TRAVELER</h4>
               <nav>
@@ -17,10 +18,10 @@ const Projects = () => {
                 </ul>
               </nav>
             </div>
-            <img src="./public/assets/traveler.jpg" alt="Image du projet Traveler" />
-        </a>
+            <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
+        </Link>
 
-        <a href="recettes-en-pot" className="project">
+        <Link to="recettes-en-pot" className="project">
           <div className="project-hover">
             <h4>RECETTES EN POT</h4>
             <nav>
@@ -31,10 +32,10 @@ const Projects = () => {
               </ul>
             </nav>
           </div>
-          <img src="./public/assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
-        </a>
+          <img src="assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
+        </Link>
 
-        <a href="furnitura" className="project">
+        <Link to="furnitura" className="project">
           <div className="project-hover">
             <h4>FURNITURA</h4>
             <nav>
@@ -44,10 +45,10 @@ const Projects = () => {
               </ul>
             </nav>
           </div>
-          <img src="./public/assets/furnitura.jpg" alt="Image du projet Furnitura" />
-        </a>
+          <img src="assets/furnitura.jpg" alt="Image du projet Furnitura" />
+        </Link>
 
-        <a href="timdesign" className="project">
+        <Link to="timdesign" className="project">
           <div className="project-hover">
             <h4>TIMDESIGN</h4>
             <nav>
@@ -58,8 +59,8 @@ const Projects = () => {
                 </ul>
               </nav>
             </div>
-            <img src="./public/assets/timdesign.jpg" alt="Image du projet Timdesign" />
-        </a>
+            <img src="assets/timdesign.jpg" alt="Image du projet Timdesign" />
+        </Link>
 
       </div>
     </div>

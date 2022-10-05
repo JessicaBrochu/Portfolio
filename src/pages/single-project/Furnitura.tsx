@@ -28,7 +28,7 @@ const Furnitura = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="./public/assets/furnitura.jpg" alt="Image du projet Traveler" />
+                <img src="assets/furnitura.jpg" alt="Image du projet Traveler" />
               </div>
             </div>
         </div>
