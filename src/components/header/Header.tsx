@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState, useRef } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './header.css'
 
 const Header = () => {
+    const {pathname} = useLocation()
+    const BASE_PATH = '/'
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
@@ -11,11 +13,14 @@ const Header = () => {
         document.body.classList.toggle('mobile-nav');
     };
 
-    const ref = React.useRef<HTMLInputElement>(null);
-
-    const scrollIntoView = () => {
-        ref.current?.scrollIntoView({behavior: 'smooth'});
-    };
+    // This gets the correct path based on the current url
+    const getBasePath = () => {
+        if (pathname === BASE_PATH) {
+            return <a href="#hero">ACCUEIL</a>
+        } 
+        return <Link to="/#hero" >ACCUEIL</Link>
+    }
+    const basePath = getBasePath()
     
     return (
       <div className="header">
@@ -31,10 +36,10 @@ const Header = () => {
         </div>
         <nav className="desktop-nav" id="nav">
             <ul>
-                <li><a href="#hero">ACCUEIL</a></li>
-                <li><a href="#projects">PROJETS</a></li>
-                <li><a href="#about">À PROPOS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><Link to="/" state={{scrollId: '#hero'}}>ACCUEIL</Link></li>
+                <li><Link to="/" state={{scrollId: '#projects'}}>PROJETS</Link></li>
+                <li><Link to="/" state={{scrollId: '#about'}}>À PROPOS</Link></li>
+                <li><Link to="/" state={{scrollId: '#contact'}}>CONTACT</Link></li>
             </ul>
         </nav>
         <button onClick={handleClick} className="header-toggle" id="hamburger">
