@@ -48,7 +48,7 @@ const Contact = () => {
             <label>Message</label>
             <textarea className='message-box' name="message" />
           </div>
-          <input className='contact-button' type="submit" value="Envoyé" />
+          <input className='contact-button' type="submit" value="Envoyer" />
         </form>
         <div className="contact-content">
           <h3>CONTACTEZ-MOI</h3>
