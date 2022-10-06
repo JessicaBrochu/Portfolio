@@ -27,7 +27,7 @@ const Recettes = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="assets/recettes-en-pot.jpg" alt="Image du projet Traveler" />
+                <video loop muted autoPlay src="assets/recettes-en-pot.mp4"></video>
               </div>
             </div>
         </div>
