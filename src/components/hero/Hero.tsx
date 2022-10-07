@@ -10,15 +10,13 @@ import { Link } from 'react-router-dom'
 
 function Stars(props: unknown) {
   const ref = useRef<THREE.Points>()
-  const [xState, setXState] = useState(10)
-  const [yState, setYstate] = useState(15)
 
-  useEffect(() => {
-    window.addEventListener('mousemove', (e) => {
-      console.log('mousemove', e)
-    })
-    // return window.removeEventListener('mousemove')
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener('mousemove', (e) => {
+  //     console.log('mousemove', e)
+  //   })
+  //   // return window.removeEventListener('mousemove')
+  // }, [])
 
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.5 })

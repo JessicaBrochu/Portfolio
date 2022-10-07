@@ -9,7 +9,6 @@ export const useScroll = (ref: RefObject<HTMLDivElement>, path: Path) => {
 
     useEffect(() => {
         if (pathname === BASE_PATH && scrollId === path) {
-            console.log(state)
             ref.current?.scrollIntoView({ behavior: 'smooth' })
             navigate(pathname, { replace: true })
         }
