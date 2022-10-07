@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import Header from '../header/Header'
@@ -10,15 +10,39 @@ import { Link } from 'react-router-dom'
 
 function Stars(props: unknown) {
   const ref = useRef<THREE.Points>()
+  const [xState, setXState] = useState(10)
+  const [yState, setYstate] = useState(15)
+
+  useEffect(() => {
+    window.addEventListener('mousemove', (e) => {
+      console.log('mousemove', e)
+    })
+    // return window.removeEventListener('mousemove')
+  }, [])
 
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.5 })
   )
+
   useFrame((state, delta) => {
+    window.addEventListener('mousemove', (e) => {
+      let windowHeight = window.innerHeight
+      let windowWidth = window.innerWidth
+      let xValue = e.x
+      let yValue = e.y
+
+      let mousePosX = -1 + (xValue / windowWidth) * 2
+      let mousePosY = 1 - (yValue / windowHeight) * 2
+      console.log(Math.round(mousePosX * 10) / 10)
+      if (!ref.current) return
+      ref.current.rotation.x -= delta / (Math.round(mousePosX * 10) / 10) / 1000
+      ref.current.rotation.y -= delta / (Math.round(mousePosY * 10) / 10) / 1000
+    })
     if (!ref.current) return
     ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+    ref.current.rotation.y -= delta / 10
   })
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
