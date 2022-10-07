@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { useEffect, useRef } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
+import { Link, } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
-import { BASE_PATH, Path } from '../../utils/utils'
+import {Path } from '../../utils/utils'
 import './projects.css'
 
 const Projects = () => {

@@ -1,4 +1,4 @@
-import { useState, useRef, ReactNode } from 'react'
+import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import Header from '../header/Header'
@@ -6,8 +6,7 @@ import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
-import { Link, useLocation } from 'react-router-dom'
-import { BASE_PATH, Path } from '../../utils/utils'
+import { Link } from 'react-router-dom'
 
 function Stars(props: unknown) {
   const ref = useRef<THREE.Points>()
