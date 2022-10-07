@@ -18,6 +18,29 @@ body {
     scroll-snap-stop: always;
 }
 
+.arrow{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.arrow svg{
+    fill: none;
+}
+
+.arrow svg:hover{
+    width: 45px;
+    height: 45px;
+}
+
+.arrow:hover{
+    bottom: 38px;
+    right: 38px;
+    z-index: 10;
+}
+
 @media (max-width: 1023px){
     .home{
         scroll-snap-type: none;

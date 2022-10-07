@@ -24,17 +24,17 @@ function Stars(props: unknown) {
 
   useFrame((state, delta) => {
     window.addEventListener('mousemove', (e) => {
-      let windowHeight = window.innerHeight
-      let windowWidth = window.innerWidth
-      let xValue = e.x
-      let yValue = e.y
+      // let windowHeight = window.innerHeight
+      // let windowWidth = window.innerWidth
+      // let xValue = e.x
+      // let yValue = e.y
 
-      let mousePosX = -1 + (xValue / windowWidth) * 2
-      let mousePosY = 1 - (yValue / windowHeight) * 2
-      console.log(Math.round(mousePosX * 10) / 10)
-      if (!ref.current) return
-      ref.current.rotation.x -= delta / (Math.round(mousePosX * 10) / 10) / 1000
-      ref.current.rotation.y -= delta / (Math.round(mousePosY * 10) / 10) / 1000
+      // let mousePosX = -1 + (xValue / windowWidth) * 2
+      // let mousePosY = 1 - (yValue / windowHeight) * 2
+      // console.log(Math.round(mousePosX * 10) / 10)
+      // if (!ref.current) return
+      // ref.current.rotation.x -= delta / (Math.round(mousePosX * 10) / 10) / 1000
+      // ref.current.rotation.y -= delta / (Math.round(mousePosY * 10) / 10) / 1000
     })
     if (!ref.current) return
     ref.current.rotation.x -= delta / 10
