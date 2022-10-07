@@ -46,8 +46,8 @@ const Contact = () => {
           <h3>CONTACTEZ-MOI</h3>
           <p>Vous voulez en savoir davantage sur moi? Je vous invite à <a href="./public/assets/jessica-brochu.pdf" download="jessica-brochu.pdf">consulter mon CV</a> et à me contacter pour de plus amples informations.</p>
           <div className='contact-mail-phone'>
-            <p>jessicabrochu.pro@gmail.com</p>
-            <p>514-918-4945</p>
+            <a href = "mailto: jessicabrochu.pro@gmail.com">jessicabrochu.pro@gmail.com</a>
+            <a className='contact-phone' href="tel:5149184945">514-918-4945</a>
           </div>
           <div className='contact-social'>
             <a className='icons' href="https://github.com/JessicaBrochu" target="_blank">
