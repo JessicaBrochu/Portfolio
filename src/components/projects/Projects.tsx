@@ -1,20 +1,13 @@
 import * as React from 'react'
 import { useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useScroll } from '../../utils/ScrollHook'
 import { BASE_PATH, Path } from '../../utils/utils'
 import './projects.css'
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement>(null)
-  const {pathname, state} = useLocation()
-  const {scrollId} = state as { scrollId?: string } || ''
-  
-  useEffect(() => {
-    if (pathname === BASE_PATH && scrollId === Path.PROJECTS) {
-        console.log(state)
-        ref.current?.scrollIntoView({behavior: 'smooth'})
-    }
-  }, [state, pathname])
+  useScroll(ref, Path.PROJECTS)
 
   return (
     <div className="projects" id='projects' ref={ref}>

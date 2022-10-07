@@ -6,7 +6,7 @@ import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { BASE_PATH, Path } from '../../utils/utils'
 
 function Stars(props: unknown) {
@@ -56,7 +56,7 @@ const Hero = () => {
           <h1>Jessica Brochu</h1>
           <h2>Développeuse Front-End</h2>
           <div className="button-ctn">
-            <a href="#" className='button'>Voir mes projets</a>
+            <Link to="/" state={{ scrollId: '#projects' }}>Voir mes projets</Link>
           </div>
         </div>
       </div>

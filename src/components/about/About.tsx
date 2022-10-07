@@ -1,22 +1,13 @@
 import * as React from 'react'
 import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useScroll } from '../../utils/ScrollHook'
 import { BASE_PATH, Path } from '../../utils/utils'
 import './about.css'
 
 const About = () => {
-
   const ref = useRef<HTMLDivElement>(null)
-  const {pathname, state} = useLocation()
-  const location = useLocation()
-  const {scrollId} = state as { scrollId?: string } || ''
-  
-  useEffect(() => {
-    if (pathname === BASE_PATH && scrollId === Path.ABOUT) {
-        console.log(state)
-        ref.current?.scrollIntoView({behavior: 'smooth'})
-    }
-  }, [state, pathname])
+  useScroll(ref, Path.ABOUT)
 
     return (
       <div className="about" id='about' ref={ref}>

@@ -3,18 +3,11 @@ import emailjs from 'emailjs-com';
 import './contact.css'
 import { useLocation } from 'react-router-dom';
 import { BASE_PATH, Path } from '../../utils/utils';
+import { useScroll } from '../../utils/ScrollHook';
 
 const Contact = () => {
   const ref = useRef<HTMLDivElement>(null)
-  const {pathname, state} = useLocation()
-  const {scrollId} = state as { scrollId?: string } || ''
-  
-  useEffect(() => {
-    if (pathname === BASE_PATH && scrollId === Path.CONTACT) {
-        console.log(state)
-        ref.current?.scrollIntoView({behavior: 'smooth'})
-    }
-  }, [state, pathname])
+  useScroll(ref, Path.CONTACT)
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
