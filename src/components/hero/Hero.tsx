@@ -7,6 +7,8 @@ import './hero.css'
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
 import { Link } from 'react-router-dom'
+import { Path } from '../../utils/utils'
+import { useScroll } from '../../utils/ScrollHook'
 
 function Stars(props: unknown) {
   const ref = useRef<THREE.Points>()
@@ -69,8 +71,11 @@ function Stars(props: unknown) {
 }
 
 const Hero = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  useScroll(ref, Path.HERO)
+
   return (
-    <div className="hero" id='hero'>
+    <div className="hero" id='hero' ref={ref}>
       <Header />
       <div className='wrapper'>
         <div className="hero-text">
