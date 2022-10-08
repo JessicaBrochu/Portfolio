@@ -24,6 +24,10 @@ footer .wrapper{
     font-size: 14px;
 }
 
+.footer-nav a:hover{
+    color: #D35F74;
+}
+
 footer p{
     position: absolute;
     bottom: 15px;

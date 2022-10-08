@@ -1,11 +1,16 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
+import { useRef } from 'react'
+import { Link, } from 'react-router-dom'
+import { useScroll } from '../../utils/ScrollHook'
+import {Path } from '../../utils/utils'
 import './projects.css'
 
 const Projects = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  useScroll(ref, Path.PROJECTS)
 
   return (
-    <div className="projects" id='projects'>
+    <div className="projects" id='projects' ref={ref}>
       <div className="projects-ctn">
 
         <Link to="traveler" className="project">

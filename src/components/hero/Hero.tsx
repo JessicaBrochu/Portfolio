@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import Header from '../header/Header'
@@ -6,17 +6,43 @@ import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
+import { Link } from 'react-router-dom'
+import { Path } from '../../utils/utils'
+import { useScroll } from '../../utils/ScrollHook'
 
 function Stars(props: unknown) {
   const ref = useRef<THREE.Points>()
+
+  // useEffect(() => {
+  //   window.addEventListener('mousemove', (e) => {
+  //     console.log('mousemove', e)
+  //   })
+  //   // return window.removeEventListener('mousemove')
+  // }, [])
+
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.5 })
   )
+
   useFrame((state, delta) => {
+    window.addEventListener('mousemove', (e) => {
+      // let windowHeight = window.innerHeight
+      // let windowWidth = window.innerWidth
+      // let xValue = e.x
+      // let yValue = e.y
+
+      // let mousePosX = -1 + (xValue / windowWidth) * 2
+      // let mousePosY = 1 - (yValue / windowHeight) * 2
+      // console.log(Math.round(mousePosX * 10) / 10)
+      // if (!ref.current) return
+      // ref.current.rotation.x -= delta / (Math.round(mousePosX * 10) / 10) / 1000
+      // ref.current.rotation.y -= delta / (Math.round(mousePosY * 10) / 10) / 1000
+    })
     if (!ref.current) return
     ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+    ref.current.rotation.y -= delta / 10
   })
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
@@ -45,15 +71,18 @@ function Stars(props: unknown) {
 }
 
 const Hero = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  useScroll(ref, Path.HERO)
+
   return (
-    <div className="hero" id='hero'>
+    <div className="hero" id='hero' ref={ref}>
       <Header />
       <div className='wrapper'>
         <div className="hero-text">
           <h1>Jessica Brochu</h1>
           <h2>Développeuse Front-End</h2>
           <div className="button-ctn">
-            <a href="#" className='button'>Voir mes projets</a>
+            <Link to="/" state={{ scrollId: '#projects' }}>Voir mes projets</Link>
           </div>
         </div>
       </div>

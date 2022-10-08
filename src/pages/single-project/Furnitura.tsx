@@ -28,7 +28,7 @@ const Furnitura = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="assets/furnitura.jpg" alt="Image du projet Traveler" />
+                <video loop muted autoPlay src="assets/furnitura.mp4"></video>
               </div>
             </div>
         </div>

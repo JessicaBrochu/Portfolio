@@ -1,3 +1,7 @@
+.single-project{
+    overflow-x: hidden;
+}
+
 .single-traveler{
     background-image: url("../../../public/assets/traveler-bg.jpg");
 }
@@ -71,7 +75,7 @@
     height: 50%;
 }
 
-.single-project-media img{
+.single-project-media video{
     width: 60vw;
     object-fit: cover;
 }
@@ -96,7 +100,7 @@
         height: 50%;
     }
     
-    .single-project-media img{
+    .single-project-media video{
         width: 100%;
         object-fit: cover;
     }

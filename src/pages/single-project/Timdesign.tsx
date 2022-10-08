@@ -27,7 +27,7 @@ const Timdesign = () => {
                 </div>
               </div>
               <div className='single-project-media'>
-                <img src="assets/timdesign.jpg" alt="Image du projet Traveler" />
+                <video loop muted autoPlay src="assets/timdesign.mp4"></video>
               </div>
             </div>
         </div>
