@@ -10,37 +10,52 @@ import { Link } from 'react-router-dom'
 import { Path } from '../../utils/utils'
 import { useScroll } from '../../utils/ScrollHook'
 
-function Stars(props: unknown) {
-  const ref = useRef<THREE.Points>()
+enum AxisState {
+  STOPPED = 0,
+  NEGATIVE = -1,
+  POSITIVE = 1
+}
 
-  // useEffect(() => {
-  //   window.addEventListener('mousemove', (e) => {
-  //     console.log('mousemove', e)
-  //   })
-  //   // return window.removeEventListener('mousemove')
-  // }, [])
+type Stars = {
+  xMove: AxisState
+  yMove: AxisState
+}
+
+function Stars({ xMove, yMove }: Stars) {
+  const ref = useRef<THREE.Points>()
 
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.5 })
   )
 
   useFrame((state, delta) => {
-    window.addEventListener('mousemove', (e) => {
-      // let windowHeight = window.innerHeight
-      // let windowWidth = window.innerWidth
-      // let xValue = e.x
-      // let yValue = e.y
-
-      // let mousePosX = -1 + (xValue / windowWidth) * 2
-      // let mousePosY = 1 - (yValue / windowHeight) * 2
-      // console.log(Math.round(mousePosX * 10) / 10)
-      // if (!ref.current) return
-      // ref.current.rotation.x -= delta / (Math.round(mousePosX * 10) / 10) / 1000
-      // ref.current.rotation.y -= delta / (Math.round(mousePosY * 10) / 10) / 1000
-    })
     if (!ref.current) return
-    ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 10
+
+    // Defines the movement on the x axis based on mouse movement
+    switch (xMove) {
+      case AxisState.POSITIVE:
+        ref.current.rotation.x += delta / 3
+        break;
+      case AxisState.NEGATIVE:
+        ref.current.rotation.x -= delta / 3
+        break;
+      default:
+        ref.current.rotation.x -= delta / 10
+        break;
+    }
+
+    // Defines the movement on the y axis based on mouse movement
+    switch (yMove) {
+      case AxisState.POSITIVE:
+        ref.current.rotation.y += delta / 3
+        break;
+      case AxisState.NEGATIVE:
+        ref.current.rotation.y -= delta / 3
+        break;
+      default:
+        ref.current.rotation.y -= delta / 10
+        break;
+    }
   })
 
   return (
@@ -53,8 +68,6 @@ function Stars(props: unknown) {
         positions={sphere}
         stride={3}
         frustumCulled={false}
-        //@ts-ignore
-        {...props}
       >
         <PointMaterial
           // FIXME find a way to remove this typing error
@@ -72,10 +85,51 @@ function Stars(props: unknown) {
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null)
+  const [xMove, setXMove] = useState<AxisState>(AxisState.STOPPED)
+  const [yMove, setYMove] = useState<AxisState>(AxisState.STOPPED)
   useScroll(ref, Path.HERO)
 
+  // This is called when the mouse movement is completely stopped
+  const onMouseStop = () => {
+    setXMove(AxisState.STOPPED)
+    setYMove(AxisState.STOPPED)
+  }
+
+  let mouseState: number
+  // This detects if the mouse moves in a specific axis in its negative, positive or even if it stops
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const { movementX, movementY } = e.nativeEvent
+
+    switch (true) {
+      case movementX > 0:
+        setXMove(AxisState.POSITIVE)
+        break;
+      case movementX < 0:
+        setXMove(AxisState.NEGATIVE)
+        break;
+      case movementX === 0:
+        setXMove(AxisState.STOPPED)
+        break;
+      case movementY > 0:
+        setYMove(AxisState.POSITIVE)
+        break;
+      case movementY < 0:
+        setYMove(AxisState.NEGATIVE)
+        break;
+      case movementY === 0:
+        setYMove(AxisState.STOPPED)
+        break;
+      default:
+        break;
+    }
+
+    // This clears the timeout until the last mouse movement
+    clearTimeout(mouseState)
+    mouseState = setTimeout(onMouseStop, 500)
+  }
+
   return (
-    <div className="hero" id='hero' ref={ref}>
+    <div onMouseMove={onMouseMove} className="hero" id='hero' ref={ref}>
       <Header />
       <div className='wrapper'>
         <div className="hero-text">
@@ -90,7 +144,7 @@ const Hero = () => {
         style={{ height: '100vh', background: '#07070e' }}
         camera={{ position: [0, 0, 1] }}
       >
-        <Stars />
+        <Stars xMove={xMove} yMove={yMove} />
       </Canvas>
     </div>
   )
