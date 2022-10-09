@@ -81,7 +81,19 @@
   top: 24px;
 }
 
-@media (max-width: 670px){
+@media (max-width: 1470px){
+
+  .logo-ctn{
+    left: 20px;
+  }
+
+  .desktop-nav{
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px){
+
   .header-toggle{
     display: block;
   }
@@ -122,20 +134,6 @@
   .mobile-nav .desktop-nav{
     transform: translate(0%);
   }
-}
-
-@media (max-width: 1470px){
-
-  .logo-ctn{
-    left: 20px;
-  }
-
-  .desktop-nav{
-    right: 20px;
-  }
-}
-
-@media (max-width: 768px){
 
   .logo-ctn{
     top: 25px;
