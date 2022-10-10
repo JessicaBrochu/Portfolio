@@ -17,7 +17,7 @@ const Recettes = () => {
                     <li>HTML</li>
                     <li>SCSS</li>
                     <li>JavaScript</li>
-                    <li>Vite</li>
+                    <li>Swiperjs</li>
                   </ul>
                 </nav>
                 <p>Recette en pot est un projet scolaire dont le but était de faire une refonte du site recettesenpot.com. </p>
@@ -28,6 +28,7 @@ const Recettes = () => {
               </div>
               <div className='single-project-media'>
                 <video loop muted autoPlay src="assets/recettes-en-pot.mp4"></video>
+                <p>Projet réalisé en techniques d'intégration multimédia du Cégep Édouard-Montpetit, sans but commercial. Les marques commerciales et les droits d'auteur sont la propriété de leurs propriétaires respectifs.</p>
               </div>
             </div>
         </div>
