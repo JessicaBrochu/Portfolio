@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
 import { BASE_PATH, Path } from '../../utils/utils'
@@ -136,4 +136,4 @@ const About = () => {
   )
 }
 
-export default About
+export default memo(About)

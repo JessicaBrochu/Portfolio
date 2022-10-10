@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './contact.css'
 import { Path } from '../../utils/utils';
@@ -72,4 +72,4 @@ const Contact = () => {
   );
 }
 
-export default Contact
+export default memo(Contact)

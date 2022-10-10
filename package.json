@@ -15,6 +15,7 @@
     "emailjs": "^4.0.1",
     "emailjs-com": "^3.2.0",
     "lamina": "1.0.6",
+    "lodash.debounce": "^4.0.8",
     "maath": "0.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

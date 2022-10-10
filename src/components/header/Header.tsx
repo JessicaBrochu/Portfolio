@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useState, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './header.css'
@@ -51,4 +51,4 @@ const Header = () => {
     )
   }
   
-  export default Header
+  export default memo(Header)

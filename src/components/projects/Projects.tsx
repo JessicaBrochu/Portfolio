@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useRef } from 'react'
+import { memo, useRef } from 'react'
 import { Link, } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
 import { Path } from '../../utils/utils'
@@ -83,4 +83,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default memo(Projects)
