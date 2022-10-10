@@ -1,0 +1,13 @@
+.error-page-text{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-page-text h3{
+    color: #fff;
+}
