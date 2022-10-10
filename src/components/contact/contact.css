@@ -85,10 +85,21 @@
     padding-top: 8px
 }
 
+.contact h3{
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1023px){
+
+    .contact{
+        height: auto;
+        margin: 100px 0;
+    }
+}
+
 @media (max-width: 930px){
 
     .contact{
-        padding: 100px 0;
         height: auto;
     }
 

@@ -131,7 +131,7 @@ const Hero = () => {
     <div className="error-page">
         <div className="error-page-text">
             <h1>Oops!</h1>
-            <h3>Cette page n'existe pas!</h3>
+            <h2 className='like-h3'>Cette page n'existe pas!</h2>
             <div className="error-page-button button-ctn">
                 <Link to="/" state={{ scrollId: '#hero' }}>Retourner au menu</Link>
             </div>
