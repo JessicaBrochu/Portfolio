@@ -28,16 +28,11 @@ body {
 
 .arrow svg{
     fill: none;
+    transition: transform 200ms ease-in-out;
 }
 
 .arrow svg:hover{
-    width: 45px;
-    height: 45px;
-}
-
-.arrow:hover{
-    bottom: 38px;
-    right: 38px;
+    transform: scale(1.15);
     z-index: 10;
 }
 
