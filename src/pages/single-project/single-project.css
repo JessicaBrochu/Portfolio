@@ -18,6 +18,10 @@
     background-image: url("../../../public/assets/timdesign-bg.jpg");
 }
 
+.single-recettes .single-project-media p{
+    font-size: 10px;
+}
+
 .single-project h1{
     padding-top: 140px;
     font-size: 140px;
