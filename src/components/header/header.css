@@ -38,11 +38,27 @@
 .desktop-nav ul li a{
   color: #fff;
   font-weight: 600;
+  position: relative;
+  transform-origin: left;
 }
 
-.desktop-nav ul li a:hover{
-  color: #D35F74;
-  font-weight: 600;
+.desktop-nav ul li a::after{
+  content: "";
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  bottom: -2px;
+  transform: scaleX(0%);
+  transition: transform 200ms ease-in;
+  transform-origin: right;
+}
+
+.desktop-nav ul li a:hover::after{
+  transform: scalex(100%);
+  transform-origin: left;
+  transition: transform 200ms ease-in;
 }
 
 .header-toggle {
