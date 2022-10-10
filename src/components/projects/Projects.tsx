@@ -2,8 +2,11 @@ import * as React from 'react'
 import { useRef } from 'react'
 import { Link, } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
-import {Path } from '../../utils/utils'
+import { Path } from '../../utils/utils'
 import './projects.css'
+// FIXME declare this module type
+//@ts-ignore
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -15,26 +18,30 @@ const Projects = () => {
 
         <Link to="traveler" className="project">
           <div className="project-hover">
-              <h4>TRAVELER</h4>
-              <nav>
+            <Fade left><h4>TRAVELER</h4></Fade>
+            <nav>
+              <Fade left>
                 <ul className="project-technologies">
                   <li>ReactJs</li>
                   <li>TypeScript</li>
                 </ul>
-              </nav>
-            </div>
-            <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
+              </Fade>
+            </nav>
+          </div>
+          <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
         </Link>
 
         <Link to="recettes-en-pot" className="project">
           <div className="project-hover">
-            <h4>RECETTES EN POT</h4>
+            <Fade right><h4>RECETTES EN POT</h4></Fade>
             <nav>
-              <ul className="project-technologies">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>Javascript</li>
-              </ul>
+              <Fade right>
+                <ul className="project-technologies">
+                  <li>HTML</li>
+                  <li>SCSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </Fade>
             </nav>
           </div>
           <img src="assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
@@ -42,12 +49,14 @@ const Projects = () => {
 
         <Link to="furnitura" className="project">
           <div className="project-hover">
-            <h4>FURNITURA</h4>
+            <Fade left><h4>FURNITURA</h4></Fade>
             <nav>
-              <ul className="project-technologies">
-                <li>Vue.js</li>
-                <li>JavaScript</li>
-              </ul>
+              <Fade left>
+                <ul className="project-technologies">
+                  <li>Vue.js</li>
+                  <li>JavaScript</li>
+                </ul>
+              </Fade>
             </nav>
           </div>
           <img src="assets/furnitura.jpg" alt="Image du projet Furnitura" />
@@ -55,16 +64,18 @@ const Projects = () => {
 
         <Link to="timdesign" className="project">
           <div className="project-hover">
-            <h4>TIMDESIGN</h4>
+            <Fade right><h4>TIMDESIGN</h4></Fade>
             <nav>
+              <Fade right>
                 <ul className="project-technologies">
                   <li>HTML</li>
                   <li>SCSS</li>
                   <li>Javascript</li>
                 </ul>
-              </nav>
-            </div>
-            <img src="assets/timdesign.jpg" alt="Image du projet Timdesign" />
+              </Fade>
+            </nav>
+          </div>
+          <img src="assets/timdesign.jpg" alt="Image du projet Timdesign" />
         </Link>
 
       </div>
