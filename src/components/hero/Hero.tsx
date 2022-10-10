@@ -9,6 +9,9 @@ import * as random from 'maath/random/dist/maath-random.esm'
 import { Link } from 'react-router-dom'
 import { Path } from '../../utils/utils'
 import { useScroll } from '../../utils/ScrollHook'
+// FIXME declare this module type
+//@ts-ignore
+import Fade from 'react-reveal/Fade';
 
 enum AxisState {
   STOPPED = 0,
@@ -129,15 +132,19 @@ const Hero = () => {
   }
 
   return (
+
     <div onMouseMove={onMouseMove} className="hero" id='hero' ref={ref}>
       <Header />
       <div className='wrapper'>
+
         <div className="hero-text">
-          <h1>Jessica Brochu</h1>
-          <h2>Développeuse Front-End</h2>
-          <div className="button-ctn">
-            <Link to="/" state={{ scrollId: '#projects' }}>Voir mes projets</Link>
-          </div>
+          <Fade bottom><h1>Jessica Brochu</h1></Fade>
+          <Fade bottom><h2>Développeuse Front-End</h2></Fade>
+          <Fade bottom>
+            <div className="button-ctn">
+              <Link to="/" state={{ scrollId: '#projects' }}>Voir mes projets</Link>
+            </div>
+          </Fade>
         </div>
       </div>
       <Canvas
