@@ -16,15 +16,7 @@ const Contact = () => {
 
     emailjs
       .sendForm("service_u62affi", "template_4gshdma", e.currentTarget, "GBG2OZlOdP08Ivar3")
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.currentTarget.reset()
+      e.currentTarget.reset()
   }
 
   return (
