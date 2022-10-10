@@ -26,10 +26,6 @@
     margin-top: 15px;
 }
 
-.contact-input input{
-    height: 36px;
-}
-
 .message-box{
     height: 210px;
 }
@@ -43,6 +39,7 @@
     border: none;
     cursor: pointer;
     font-size: 15px;
+    border-radius: 1px;
 }
 
 .contact-button:hover{
@@ -91,6 +88,17 @@
 
 textarea{
     resize: none
+}
+
+.contact-input input{
+    border: #9C9C9F solid 1px;
+    border-radius: 2px;
+    height: 36px;
+}
+
+.contact-input textarea{
+    border: #9C9C9F solid 1px;
+    border-radius: 2px;
 }
 
 @media (max-width: 1023px){
