@@ -5,3 +5,9 @@ export enum Path {
     ABOUT = '#about',
     CONTACT = '#contact'
 }
+
+// const {HERO, PROJECTS, ABOUT, CONTACT}
+
+export const path = [
+
+]

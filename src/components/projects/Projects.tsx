@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { memo, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import { Link, } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
 import { Path } from '../../utils/utils'
@@ -8,9 +8,15 @@ import './projects.css'
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const Projects = () => {
+const Projects = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.PROJECTS)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
 
   return (
     <div className="projects" id='projects' ref={ref}>

@@ -7,9 +7,15 @@ import { useScroll } from '../../utils/ScrollHook';
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const Contact = () => {
+const Contact = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.CONTACT)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();

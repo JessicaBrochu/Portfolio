@@ -4,43 +4,42 @@ import Projects from '../../components/projects/Projects'
 import About from '../../components/about/About'
 import Contact from '../../components/contact/Contact'
 import Footer from '../../components/footer/Footer'
-import { Link, useLocation, useNavigate, } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './home.css'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Path } from '../../utils/utils'
-import { useScroll } from '../../utils/ScrollHook'
-//@ts-ignore
-import debounce from 'lodash.debounce'
 
 const App = () => {
-  const [viewXPosition, setViewXPosition] = useState(0)
-  const navigate = useNavigate()
+  const path = Object.values(Path)
+  const [sectionState, setSectionState] = useState(0)
 
-  const scrollManager = useCallback(debounce((position: number) => {
-    navigate('/', { state: { scrollId: Path.CONTACT }, replace: true })
-    setViewXPosition(position)
-  }, 100), [])
+  useEffect(() => {
+    window.addEventListener('wheel', scrollToSection);
+  }, [sectionState, setSectionState])
 
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement, UIEvent>) => {
-    if (viewXPosition > e.currentTarget.scrollTop) {
-    } else if (viewXPosition < e.currentTarget.scrollTop) {
-      scrollManager(e.currentTarget.scrollTop)
+  const scrollToSection = (wheelEvent: WheelEvent) => {
+    const { deltaY } = wheelEvent
+
+    if (deltaY < 0) {
+      setSectionState(sectionState > 0 ? sectionState - 1 : sectionState)
+    } else if (deltaY > 0) {
+      setSectionState(sectionState < 3 ? sectionState + 1 : sectionState)
     }
-  }, [])
+  }
 
   return (
-    <div className='home' onScroll={handleScroll} id='home'>
+    <div className='home' id='home'>
       <div className='section'>
-        <Hero />
+        <Hero isSectionAvtive={path[sectionState] === '#hero'} />
       </div>
       <div className='section'>
-        <Projects />
+        <Projects isSectionAvtive={path[sectionState] === '#projects'} />
       </div>
       <div className='section'>
-        <About />
+        <About isSectionAvtive={path[sectionState] === '#about'} />
       </div>
       <div className='section'>
-        <Contact />
+        <Contact isSectionAvtive={path[sectionState] === '#contact'} />
         <Footer />
       </div>
       <Link to="/" state={{ scrollId: '#hero' }} className="arrow">
