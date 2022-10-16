@@ -38,6 +38,8 @@ body {
 
 @media (max-width: 1023px){
     .home{
+        overflow-x: hidden;
+        overflow-y: scroll;
         scroll-snap-type: none;
     }
 

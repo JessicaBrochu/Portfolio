@@ -14,7 +14,9 @@ const App = () => {
   const [sectionState, setSectionState] = useState(0)
 
   useEffect(() => {
-    window.addEventListener('wheel', scrollToSection);
+    if (window.screen.width > 1023) {
+      window.addEventListener('wheel', scrollToSection);
+    }
   }, [sectionState, setSectionState])
 
   const scrollToSection = (wheelEvent: WheelEvent) => {
