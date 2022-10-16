@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './contact.css'
 import { Path } from '../../utils/utils';
@@ -7,9 +7,15 @@ import { useScroll } from '../../utils/ScrollHook';
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const Contact = () => {
+const Contact = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.CONTACT)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -72,4 +78,4 @@ const Contact = () => {
   );
 }
 
-export default Contact
+export default memo(Contact)

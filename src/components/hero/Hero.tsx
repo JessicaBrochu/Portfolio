@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, memo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import Header from '../header/Header'
@@ -86,11 +86,17 @@ function Stars({ xMove, yMove }: Stars) {
   )
 }
 
-const Hero = () => {
+const Hero = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [xMove, setXMove] = useState<AxisState>(AxisState.STOPPED)
   const [yMove, setYMove] = useState<AxisState>(AxisState.STOPPED)
   useScroll(ref, Path.HERO)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
 
   // This is called when the mouse movement is completely stopped
   const onMouseStop = () => {
@@ -157,4 +163,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default memo(Hero)

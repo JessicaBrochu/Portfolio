@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useScroll } from '../../utils/ScrollHook'
 import { BASE_PATH, Path } from '../../utils/utils'
@@ -8,9 +8,16 @@ import './about.css'
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const About = () => {
+const About = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.ABOUT)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
+
 
   return (
     <div className="about" id='about' ref={ref}>
@@ -136,4 +143,4 @@ const About = () => {
   )
 }
 
-export default About
+export default memo(About)
