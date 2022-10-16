@@ -115,11 +115,11 @@
   }
 
   .desktop-nav{
-    transform: translate(100%);
     top: 0;
-    right: 0;
+    right: -100%;
     z-index: 2;
     transition: all 450ms ease-in-out;
+    position: fixed;
   }
 
   .desktop-nav ul{
@@ -132,6 +132,10 @@
 
   .desktop-nav ul li{
     padding: 30px 0;
+  }
+
+  .hamburger-is-active {
+    position: fixed;
   }
 
   .hamburger-is-active span:nth-child(1){
@@ -148,16 +152,12 @@
   }
 
   .mobile-nav .desktop-nav{
-    transform: translate(0%);
+    right: 0%;
   }
 
   .logo-ctn{
     top: 25px;
     left: 10px;
-  }
-
-  .desktop-nav{
-    right: 10px;
   }
 
   .header-toggle{
