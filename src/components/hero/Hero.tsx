@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect, memo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import Header from '../header/Header'
@@ -6,17 +6,61 @@ import './hero.css'
 // FIXME declare this module type
 //@ts-ignore
 import * as random from 'maath/random/dist/maath-random.esm'
+import { Link } from 'react-router-dom'
+import { Path } from '../../utils/utils'
+import { useScroll } from '../../utils/ScrollHook'
+// FIXME declare this module type
+//@ts-ignore
+import Fade from 'react-reveal/Fade';
 
-function Stars(props: unknown) {
+enum AxisState {
+  STOPPED = 0,
+  NEGATIVE = -1,
+  POSITIVE = 1
+}
+
+type Stars = {
+  xMove: AxisState
+  yMove: AxisState
+}
+
+function Stars({ xMove, yMove }: Stars) {
   const ref = useRef<THREE.Points>()
+
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.5 })
   )
+
   useFrame((state, delta) => {
     if (!ref.current) return
-    ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+
+    // Defines the movement on the x axis based on mouse movement
+    switch (xMove) {
+      case AxisState.POSITIVE:
+        ref.current.rotation.x += delta / 3
+        break;
+      case AxisState.NEGATIVE:
+        ref.current.rotation.x -= delta / 3
+        break;
+      default:
+        ref.current.rotation.x -= delta / 10
+        break;
+    }
+
+    // Defines the movement on the y axis based on mouse movement
+    switch (yMove) {
+      case AxisState.POSITIVE:
+        ref.current.rotation.y += delta / 3
+        break;
+      case AxisState.NEGATIVE:
+        ref.current.rotation.y -= delta / 3
+        break;
+      default:
+        ref.current.rotation.y -= delta / 10
+        break;
+    }
   })
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
@@ -27,8 +71,6 @@ function Stars(props: unknown) {
         positions={sphere}
         stride={3}
         frustumCulled={false}
-        //@ts-ignore
-        {...props}
       >
         <PointMaterial
           // FIXME find a way to remove this typing error
@@ -44,27 +86,81 @@ function Stars(props: unknown) {
   )
 }
 
-const Hero = () => {
+const Hero = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [xMove, setXMove] = useState<AxisState>(AxisState.STOPPED)
+  const [yMove, setYMove] = useState<AxisState>(AxisState.STOPPED)
+  useScroll(ref, Path.HERO)
+
+  useEffect(() => {
+    if (isSectionAvtive) {
+      ref.current?.scrollIntoView(true)
+    }
+  }, [isSectionAvtive])
+
+  // This is called when the mouse movement is completely stopped
+  const onMouseStop = () => {
+    setXMove(AxisState.STOPPED)
+    setYMove(AxisState.STOPPED)
+  }
+
+  let mouseState: number
+  // This detects if the mouse moves in a specific axis in its negative, positive or even if it stops
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const { movementX, movementY } = e.nativeEvent
+
+    switch (true) {
+      case movementX > 0:
+        setXMove(AxisState.POSITIVE)
+        break;
+      case movementX < 0:
+        setXMove(AxisState.NEGATIVE)
+        break;
+      case movementX === 0:
+        setXMove(AxisState.STOPPED)
+        break;
+      case movementY > 0:
+        setYMove(AxisState.POSITIVE)
+        break;
+      case movementY < 0:
+        setYMove(AxisState.NEGATIVE)
+        break;
+      case movementY === 0:
+        setYMove(AxisState.STOPPED)
+        break;
+      default:
+        break;
+    }
+
+    // This clears the timeout until the last mouse movement
+    clearTimeout(mouseState)
+    mouseState = setTimeout(onMouseStop, 500)
+  }
+
   return (
-    <div className="hero" id='hero'>
+
+    <div onMouseMove={onMouseMove} className="hero" id='hero' ref={ref}>
       <Header />
       <div className='wrapper'>
+
         <div className="hero-text">
-          <h1>Jessica Brochu</h1>
-          <h2>Développeuse Front-End</h2>
-          <div className="button-ctn">
-            <a href="#" className='button'>Voir mes projets</a>
-          </div>
+          <Fade bottom><h1>Jessica Brochu</h1></Fade>
+          <Fade bottom><h2>Développeuse Front-End</h2></Fade>
+          <Fade bottom>
+            <div className="button-ctn">
+              <Link to="/" state={{ scrollId: '#projects' }}>Voir mes projets</Link>
+            </div>
+          </Fade>
         </div>
       </div>
       <Canvas
         style={{ height: '100vh', background: '#07070e' }}
         camera={{ position: [0, 0, 1] }}
       >
-        <Stars />
+        <Stars xMove={xMove} yMove={yMove} />
       </Canvas>
     </div>
   )
 }
 
-export default Hero
+export default memo(Hero)

@@ -6,10 +6,6 @@
     position: relative;
 }
 
-.about h3{
-    padding-bottom: 25px;
-}
-
 .about-logo{
     position: absolute;
     top: 0;
@@ -26,13 +22,12 @@
    padding-right: 100px;
 }
 
-.about-content p{
-    line-height: 200%;
-    margin: 25px 0;
+.about-content h3{
+    margin-bottom: 40px;
 }
 
 .about-content p:last-child{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .about-skills{
@@ -74,6 +69,14 @@
      }
 }
 
+@media (max-width: 1023px){
+
+    .about{
+        height: auto;
+        margin: 100px 0;
+    }
+}
+
 @media (max-width: 600px){
     
     .about-content{
@@ -86,11 +89,6 @@
 }
 
 @media (max-width: 540px){
-
-    .about{
-        height: auto;
-        padding: 70px 0;
-    }
     
     .about-content{
         padding-right: 0;

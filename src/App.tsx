@@ -5,6 +5,7 @@ import Traveler from './pages/single-project/Traveler'
 import Furnitura from './pages/single-project/Furnitura'
 import Recettes from './pages/single-project/Recettes-en-pot'
 import Timdesign from './pages/single-project/Timdesign'
+import PageNotFound from './pages/404/404'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="furnitura" element={<Furnitura />} />
           <Route path="recettes-en-pot" element={<Recettes />} />
           <Route path="timdesign" element={<Timdesign />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

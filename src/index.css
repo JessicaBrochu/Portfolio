@@ -13,18 +13,76 @@ body,
   padding: 0;
 }
 
-body {
-  overscroll-behavior-y: none;
-  font-family: 'Poppins', sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  overflow: overlay;
+h1{
+  background: #fff;
+  font-weight: 700;
+  font-size: 5.625rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2{
+  background: #ffff;
+  font-weight: 300;
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 h3{
   margin: 0;
   font-size: 50px;
   font-weight: 700;
+  line-height: 110%;
+}
+
+.like-h3{
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+p{
+  line-height: 200%;
+}
+
+.button-ctn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: -70px;
+  z-index: 1;
+  width: 100%;
+}
+
+.button-ctn a{
+  background-color: #D35F74;
+  padding: 10px 15px;
+  border-radius: 1px;
+}
+
+.button-ctn a:hover{
+  background-color: #dc7f90;
+}
+
+body {
+  overscroll-behavior-y: none;
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow: overlay;
 }
 
 span{
@@ -54,10 +112,30 @@ svg {
   }
 }
 
+@media (max-width: 1000px){
+  h1{
+    font-size: 4.5rem;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 768px){
 
   .wrapper{
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 670px){
+  h1{
+    font-size: 2.5rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
   }
 }
 
