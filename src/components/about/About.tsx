@@ -8,15 +8,10 @@ import './about.css'
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const About = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
+const About = () => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.ABOUT)
 
-  useEffect(() => {
-    if (isSectionAvtive) {
-      ref.current?.scrollIntoView(true)
-    }
-  }, [isSectionAvtive])
 
 
   return (
