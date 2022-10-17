@@ -40,7 +40,7 @@ body {
 @media (max-width: 1023px){
     .home{
         overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: overlay;
         scroll-snap-type: none;
     }
 
