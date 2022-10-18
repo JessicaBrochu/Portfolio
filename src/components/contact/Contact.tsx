@@ -7,15 +7,9 @@ import { useScroll } from '../../utils/ScrollHook';
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const Contact = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
+const Contact = () => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.CONTACT)
-
-  useEffect(() => {
-    if (isSectionAvtive) {
-      ref.current?.scrollIntoView(true)
-    }
-  }, [isSectionAvtive])
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -49,7 +43,7 @@ const Contact = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
         <Fade right>
           <div className="contact-content">
             <h3>CONTACTEZ-MOI</h3>
-            <p>Vous voulez en savoir davantage sur moi? Je vous invite à <a href="./public/assets/jessica-brochu.pdf" download="jessica-brochu.pdf">consulter mon CV</a> et à me contacter pour de plus amples informations.</p>
+            <p>Vous voulez en savoir davantage sur moi? Je vous invite à <a href="./public/assets/jessica-brochu.pdf" download="jessica-brochu.pdf">consulter mon CV</a> ainsi qu'à <a href="https://www.youtube.com/watch?v=XNC0GDeVjAo&ab_channel=JessicaBrochu" target="_blank">regarder ma vidéo</a> pour de plus amples informations.</p>
             <div className='contact-mail-phone'>
               <a href="mailto: jessicabrochu.pro@gmail.com">jessicabrochu.pro@gmail.com</a>
               <a className='contact-phone' href="tel:5149184945">514-918-4945</a>

@@ -8,15 +8,9 @@ import './projects.css'
 //@ts-ignore
 import Fade from 'react-reveal/Fade';
 
-const Projects = ({ isSectionAvtive }: { isSectionAvtive: boolean }) => {
+const Projects = () => {
   const ref = useRef<HTMLDivElement>(null)
   useScroll(ref, Path.PROJECTS)
-
-  useEffect(() => {
-    if (isSectionAvtive) {
-      ref.current?.scrollIntoView(true)
-    }
-  }, [isSectionAvtive])
 
   return (
     <div className="projects" id='projects' ref={ref}>
