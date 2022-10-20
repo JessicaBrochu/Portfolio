@@ -3,19 +3,19 @@
 }
 
 .single-traveler{
-    background-image: url("../../../public/assets/traveler-bg.jpg");
+    background-image: url("../../../public/assets/traveler-bg.webp");
 }
 
 .single-recettes{
-    background-image: url("../../../public/assets/recettes-bg.jpg");
+    background-image: url("../../../public/assets/recettes-bg.webp");
 }
 
 .single-furnitura{
-    background-image: url("../../../public/assets/furnitura-bg.jpg");
+    background-image: url("../../../public/assets/furnitura-bg.wepb");
 }
 
 .single-timdesign{
-    background-image: url("../../../public/assets/timdesign-bg.jpg");
+    background-image: url("../../../public/assets/timdesign-bg.webp");
 }
 
 .single-recettes .single-project-media p{
