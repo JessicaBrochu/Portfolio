@@ -28,7 +28,10 @@ const Projects = () => {
               </Fade>
             </nav>
           </div>
-          <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
+          <picture>
+            <source srcSet="assets/traveler.webp" type="image/webp" />
+            <img src="assets/traveler.jpg" alt="Image du projet Traveler" />
+          </picture>
         </Link>
 
         <Link to="recettes-en-pot" className="project">
@@ -44,7 +47,10 @@ const Projects = () => {
               </Fade>
             </nav>
           </div>
-          <img src="assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
+          <picture>
+            <source srcSet="assets/recettes-en-pot.webp" type="image/webp" />
+            <img src="assets/recettes-en-pot.jpg" alt="Image du projet Recettes en pot" />
+          </picture>
         </Link>
 
         <Link to="furnitura" className="project">
@@ -59,7 +65,10 @@ const Projects = () => {
               </Fade>
             </nav>
           </div>
-          <img src="assets/furnitura.jpg" alt="Image du projet Furnitura" />
+          <picture>
+            <source srcSet="assets/furnitura.webp" type="image/webp" />
+            <img src="assets/furnitura.jpg" alt="Image du projet Furnitura" />
+          </picture>
         </Link>
 
         <Link to="timdesign" className="project">
@@ -75,7 +84,10 @@ const Projects = () => {
               </Fade>
             </nav>
           </div>
-          <img src="assets/timdesign.jpg" alt="Image du projet Timdesign" />
+          <picture>
+            <source srcSet="assets/timdesign.webp" type="image/webp" />
+            <img src="assets/timdesign.jpg" alt="Image du projet Timdesign" />
+          </picture>
         </Link>
 
       </div>
