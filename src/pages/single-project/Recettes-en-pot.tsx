@@ -27,7 +27,7 @@ const Recettes = () => {
               <p>Recette en pot est un projet scolaire dont le but était de faire une refonte du site recettesenpot.com. </p>
               <p>Le but de ce projet était d’apporté une touche de fraîcheur au design mais aussi de faire une refonte de l’aspect UX du site. Pour conclure ce projet, il fallait intégrer quelques-unes des maquettes en HTML CSS et JavaScript.</p>
               <div className='single-project-btn-ctn'>
-                <a href="https://jbrochu.dectim.ca/recette-en-pot/" target="_blank">Visiter le site</a>
+                <a href="https://jbrochu-recettes-en-pot.netlify.app/" target="_blank">Visiter le site</a>
               </div>
             </div>
           </Fade>
