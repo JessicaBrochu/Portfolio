@@ -27,15 +27,15 @@ const Contact = () => {
           <form className="contact-form" onSubmit={sendEmail}>
             <div className='contact-input'>
               <label>Nom</label>
-              <input type="text" name="Nom" />
+              <input aria-label='Nom' type="text" name="Nom" />
             </div>
             <div className='contact-input'>
               <label>Courriel</label>
-              <input type="email" name="Courriel" />
+              <input aria-label='Courriel' type="email" name="Courriel" />
             </div>
             <div className='contact-input'>
               <label>Message</label>
-              <textarea className='message-box' name="message" />
+              <textarea aria-label='Message' className='message-box' name="message" />
             </div>
             <input className='contact-button' type="submit" value="Envoyer" />
           </form>
