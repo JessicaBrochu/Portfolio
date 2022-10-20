@@ -129,6 +129,10 @@
         font-size: 60px;
     }
 
+    .single-project-content nav ul li{
+        font-size: 14px;
+    }
+
     .single-project-infos{
         padding-bottom: 50px;
     }
