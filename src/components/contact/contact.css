@@ -34,7 +34,7 @@
     width: 400px;
     height: 36px;
     margin-top: 30px;
-    background-color: #D35F74;
+    background-color: #CB436C;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -43,11 +43,11 @@
 }
 
 .contact-button:hover{
-    background-color: #dc7f90;
+    background-color: #E84E7C;
 }
 
 .contact a{
-    color: #D35F74;
+    color: #CB436C;
     text-decoration: underline;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .icons:hover > svg *{
-    fill: #D35F74;
+    fill: #CB436C;
 }
 
 .contact-mail-phone{

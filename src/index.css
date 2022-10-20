@@ -68,13 +68,13 @@ p{
 }
 
 .button-ctn a{
-  background-color: #D35F74;
+  background-color: #CB436C;
   padding: 10px 15px;
   border-radius: 1px;
 }
 
 .button-ctn a:hover{
-  background-color: #dc7f90;
+  background-color: #E84E7C;
 }
 
 body {
@@ -91,7 +91,7 @@ span{
 
 a {
   pointer-events: all;
-  color: #ddd;
+  color: #fff;
   text-decoration: none;
 }
 
