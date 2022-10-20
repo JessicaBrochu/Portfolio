@@ -27,7 +27,7 @@ const Timdesign = () => {
               <p>Timdesign est un projet scolaire dont le but était de créer un site de conférence fictif visant à appliquer les connaissances apprises tout au long de la session.</p>
               <p>Le but de ce projet était d’intégrer un site web avancé à l’aide d’HTML, CSS et JavaScript tout en s’occupant minutieusement du responsive. De plus, un slideshow devait être intégré à l’aide de le librairie Swiper.</p>
               <div className='single-project-btn-ctn'>
-                <a href="https://jbrochu.dectim.ca/timdesign/" target="_blank">Visiter le site</a>
+                <a href="https://jbrochu-timdesign.netlify.app/" target="_blank">Visiter le site</a>
               </div>
             </div>
           </Fade>
