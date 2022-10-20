@@ -1,3 +1,7 @@
+.error-page{
+    background-color: #07070E;
+}
+
 .error-page-text{
     position: absolute;
     z-index: 1;
