@@ -20,8 +20,8 @@ const About = () => {
         <Fade left>
           <div className='about-content'>
             <h3>À PROPOS</h3>
-            <p>Je suis une <span>développeuse front-end</span> en dernière année d’études constamment à la recherche de nouveaux défis qui me permettront d’étoffer mes connaissances et ainsi progresser dans le domaine du web.</p>
-            <p>Ayant déjà réalisé un stage en tant que développeuse front-end, je suis à la recherche d’une expérience similaire dans <span>une entreprise qui recherche une développeuse motivée.</span></p>
+            <p>Je suis une <span>développeuse front-end</span> à la recherche d’un emploi me permettant de me confronter à de nouveaux défis qui me permettront d’étoffer mes connaissances et ainsi progresser dans le domaine du web.</p>
+            <p>Ayant déjà réalisé deux stages lors de mon parcours académique en tant que développeuse front-end, je suis à la recherche d’une expérience similaire dans <span>une entreprise qui recherche une développeuse motivée.</span></p>
             <p>On me décrit comme étant une personne <span>autonome</span>, <span>motivée</span> et <span>organisée</span>.</p>
           </div>
         </Fade>
